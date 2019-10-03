@@ -236,14 +236,16 @@ nets = 0
 hornets = 0
 
   game_hash.each {|key, value|
-    value.each {|subkey, subvalue|
-      binding.pry
-      if subkey == :players
-        subvalue.each { |player|
-        
-        }
-      end
-    }
+    if key == :home
+      value.each {|subkey, subvalue|
+        if subkey == :players
+          subvalue.each { |player|
+            nets += player[:points]  
+          }
+        end
+      }
+    elsif key == :away
+    
   }
   
   

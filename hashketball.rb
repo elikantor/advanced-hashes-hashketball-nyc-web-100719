@@ -270,8 +270,6 @@ player_name = "Tim"
       value.each {|subkey, subvalue|
         if subkey == :players
           subvalue.each { |player|
-            string = player[:player_name]
-            # binding.pry
             if player_name.length < player[:player_name].length
               player_name = player[:player_name]
             end

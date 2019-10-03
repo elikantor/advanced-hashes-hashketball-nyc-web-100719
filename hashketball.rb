@@ -235,7 +235,17 @@ def winning_team()
 Nets = 0 
 Hornets = 0
 
-
+  game_hash.each {|key, value|
+    value.each {|subkey, subvalue|
+      binding.pry
+      if subkey == :players
+        subvalue.each { |player|
+        
+        }
+      end
+    }
+  }
+  
   
   
 end

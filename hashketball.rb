@@ -216,7 +216,6 @@ end
 def most_points_scored()
   high_scorer = 0
   mvp = ""
-  
   game_hash.each {|key, value|
     value.each {|subkey, subvalue|
     if subkey == :players
@@ -228,20 +227,18 @@ def most_points_scored()
       end
     end
     }
-  # value.each {|subkey, subvalue|
-  #   if subkey == :players
-  #         subvalue.each do |points|
-  #           if points[:points] == high_scorer
-  #             # return points[:player_name]
-  #           end
-  #         end
-  #   end
-  # }
   }
-  
   return mvp
 end
 
+def winning_team()
+Nets = 0 
+Hornets = 0
+
+
+  
+  
+end
 
 
 

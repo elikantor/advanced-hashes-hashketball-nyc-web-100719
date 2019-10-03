@@ -218,7 +218,6 @@ def most_points_scored()
   mvp = ""
   
   game_hash.each {|key, value|
-    binding.pry
     value.each {|subkey, subvalue|
     if subkey == :players
       subvalue.each do |player|

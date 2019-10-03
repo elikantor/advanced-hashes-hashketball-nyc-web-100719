@@ -225,7 +225,6 @@ def most_points_scored()
           high_scorer = player[:points]
         end
       end
-      end
     end
     }
    value.each {|subkey, subvalue|

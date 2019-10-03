@@ -279,16 +279,40 @@ player_name = ""
 end
 
 def long_name_steals_a_ton?()
-  
+player_name = ""
 
+  game_hash.each {|key, value|
+      value.each {|subkey, subvalue|
+        if subkey == :players
+          subvalue.each { |player|
+            if player_name.length < player[:player_name].length
+              player_name = player[:player_name]
+            end
+          }
+        end
+      }
+  }  
 
+most_steals = ""
+steals = 0
+  game_hash.each {|key, value|
+    value.each {|subkey, subvalue|
+    if subkey == :players
+      subvalue.each do |player|
+        if player[:steals] > steals
+          steals = player[:steals]
+          most_steals = player[:player_name]
+        end
+      end
+    end
+    }
+  }
 
-
-
-
-
-
-
+if most_steals = player_name
+  return true 
+else 
+  return false 
+end
 
 
 end

@@ -215,6 +215,7 @@ end
 
 def most_points_scored()
   high_scorer = 0
+  mvp = ""
   
   game_hash.each {|key, value|
     binding.pry
@@ -223,20 +224,23 @@ def most_points_scored()
       subvalue.each do |player|
         if player[:points] > high_scorer
           high_scorer = player[:points]
+          mvp = player[:player_name]
         end
       end
     end
     }
-   value.each {|subkey, subvalue|
-    if subkey == :players
-          subvalue.each do |points|
-            if points[:points] == high_scorer
-              # return points[:player_name]
-            end
-          end
-    end
-   }
+  # value.each {|subkey, subvalue|
+  #   if subkey == :players
+  #         subvalue.each do |points|
+  #           if points[:points] == high_scorer
+  #             # return points[:player_name]
+  #           end
+  #         end
+  #   end
+  # }
   }
+  
+  return mvp
 end
 
 

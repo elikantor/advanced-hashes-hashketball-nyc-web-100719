@@ -254,15 +254,33 @@ hornets = 0
       }
     end
   }
-
   if nets > hornets
     return "Brooklyn Nets"
   else
     return "Charlotte Hornets"
   end
-  
 end
 
+
+def player_with_longest_name()
+player_name = ""
+
+  game_hash.each {|key, value|
+    if key == :home
+      value.each {|subkey, subvalue|
+        if subkey == :players
+          subvalue.each { |player|
+            if player_name.length < player[:player].length
+              player_name = player[:player]
+            end
+          }
+        end
+      }
+    end
+  }  
+return player_name
+
+end
 
 
 

@@ -245,10 +245,19 @@ hornets = 0
         end
       }
     elsif key == :away
-    
+      value.each {|subkey, subvalue|
+        if subkey == :players
+          subvalue.each { |player|
+            hornets += player[:points]  
+          }
+        end
+      }
   }
-  
-  
+
+  if nets > hornets
+    return "Brooklyn Nets"
+  else
+    return "Charlotte Hornets"
   
 end
 

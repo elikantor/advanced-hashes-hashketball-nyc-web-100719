@@ -232,8 +232,8 @@ def most_points_scored()
 end
 
 def winning_team()
-Nets = 0 
-Hornets = 0
+nets = 0 
+hornets = 0
 
   game_hash.each {|key, value|
     value.each {|subkey, subvalue|

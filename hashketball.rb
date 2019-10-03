@@ -266,7 +266,6 @@ def player_with_longest_name()
 player_name = "Tim"
 
   game_hash.each {|key, value|
-    if key == :home
       value.each {|subkey, subvalue|
         if subkey == :players
           subvalue.each { |player|
@@ -276,7 +275,6 @@ player_name = "Tim"
           }
         end
       }
-    end
   }  
 return player_name
 

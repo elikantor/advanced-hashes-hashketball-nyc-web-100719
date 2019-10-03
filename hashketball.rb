@@ -225,14 +225,18 @@ def most_points_scored()
           high_scorer = player[:points]
         end
       end
-      subvalue.each do |points|
+      end
+    end
+    }
+   value.each {|subkey, subvalue|
+    if subkey == :players
+          subvalue.each do |points|
         if points[:points] == high_scorer
               # binding.pry
           return points[:player_name]
         end
-      end
     end
-    }
+   }
   }
 end
 

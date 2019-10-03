@@ -263,7 +263,7 @@ end
 
 
 def player_with_longest_name()
-player_name = ""
+player_name = "Tim"
 
   game_hash.each {|key, value|
     if key == :home

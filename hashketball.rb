@@ -216,7 +216,7 @@ end
 def most_points_scored()
   high_scorer = 0
   
-  game_hash.each { |key, value|
+  game_hash.each {|key, value|
 
     value.each {|subkey, subvalue|
     if subkey == :players
